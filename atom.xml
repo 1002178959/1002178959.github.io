@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://1002178959.github.io/"/>
-  <updated>2020-07-17T09:51:51.452Z</updated>
+  <updated>2020-07-21T10:31:56.217Z</updated>
   <id>http://1002178959.github.io/</id>
   
   <author>
@@ -15,6 +15,89 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>50道MySQL练习题</title>
+    <link href="http://1002178959.github.io/2020/07/21/mysql/mysql-lian-xi/"/>
+    <id>http://1002178959.github.io/2020/07/21/mysql/mysql-lian-xi/</id>
+    <published>2020-07-21T09:20:00.000Z</published>
+    <updated>2020-07-21T10:31:56.217Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;数据表&quot;&gt;&lt;a href=&quot;#数据表&quot; class=&quot;headerlink&quot; title=&quot;数据表&quot;&gt;&lt;/a&gt;数据表&lt;/h2&gt;&lt;p&gt;–1.学生表&lt;/p&gt;
+&lt;p&gt;Student(SId,Sname,Sage,Ssex)&lt;/p&gt;
+&lt;p&gt;–SId 学生编号,Sname
+        
+      
+    
+    </summary>
+    
+    
+      <category term="MySQL" scheme="http://1002178959.github.io/categories/MySQL/"/>
+    
+    
+      <category term="数据库" scheme="http://1002178959.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python面试题集</title>
+    <link href="http://1002178959.github.io/2020/07/18/mian-shi-zhi-nan/python-mian-shi-ti-ji/"/>
+    <id>http://1002178959.github.io/2020/07/18/mian-shi-zhi-nan/python-mian-shi-ti-ji/</id>
+    <published>2020-07-18T09:20:00.000Z</published>
+    <updated>2020-07-18T10:20:41.836Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Python面试题&quot;&gt;&lt;a href=&quot;#Python面试题&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试指南" scheme="http://1002178959.github.io/categories/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8D%97/"/>
+    
+    
+      <category term="Python" scheme="http://1002178959.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试中的公共问题</title>
+    <link href="http://1002178959.github.io/2020/07/18/mian-shi-zhi-nan/mian-shi-zhong-de-gong-gong-wen-ti/"/>
+    <id>http://1002178959.github.io/2020/07/18/mian-shi-zhi-nan/mian-shi-zhong-de-gong-gong-wen-ti/</id>
+    <published>2020-07-18T08:20:00.000Z</published>
+    <updated>2020-07-18T09:19:20.149Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;面试中的公共问题&quot;&gt;&lt;a href=&quot;#面试中的公共问题&quot; class=&quot;headerlink&quot; title=&quot;面试中的公共问题&quot;&gt;&lt;/a&gt;面试中的公共问题&lt;/h2&gt;&lt;h3 id=&quot;计算机基础&quot;&gt;&lt;a href=&quot;#计算机基础&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试指南" scheme="http://1002178959.github.io/categories/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8D%97/"/>
+    
+    
+      <category term="Python" scheme="http://1002178959.github.io/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>面向对象进阶</title>

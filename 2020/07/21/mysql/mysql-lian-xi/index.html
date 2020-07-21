@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="用函数还是用复杂的表达式, Dream Come True">
+    <meta name="keywords" content="50道MySQL练习题, Dream Come True">
     <meta name="description" content="只管把目标定在高峰，人家要笑就让他去笑">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>用函数还是用复杂的表达式 | Dream Come True</title>
+    <title>50道MySQL练习题 | Dream Come True</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">用函数还是用复杂的表达式</h1>
+                    <h1 class="description center-align post-title">50道MySQL练习题</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Python/">
-                                <span class="chip bg-color">Python</span>
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                <span class="chip bg-color">数据库</span>
                             </a>
                         
                     </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Python/" class="post-category">
-                                Python
+                            <a href="/categories/MySQL/" class="post-category">
+                                MySQL
                             </a>
                         
                     </div>
@@ -456,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-04
+                    2020-07-21
                 </div>
                 
 
@@ -465,14 +465,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    4.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    20 分
                 </div>
                 
 
@@ -487,59 +487,207 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="用函数还是用复杂的表达式"><a href="#用函数还是用复杂的表达式" class="headerlink" title="用函数还是用复杂的表达式"></a>用函数还是用复杂的表达式</h2><p>Perl语言的原作者<em>Larry Wall</em>曾经说过，伟大的程序员都有三个优点：懒惰、暴躁和自负。乍一看这三个词语没有一个是褒义词，但在程序员的世界里，这三个词有不同的意义。首先，懒惰会促使程序员去写一些省事儿的程序来辅助自己或别人更好的完成工作，这样我们就无需做那些重复和繁琐的劳动；同理能够用3行代码解决的事情，我们也绝不会写出10行代码来。其次，暴躁会让程序员主动的去完成一些你还没有提出的工作，去优化自己的代码让它更有效率，能够3秒钟完成的任务，我们绝不能容忍1分钟的等待。最后，自负会促使程序员写出可靠无误的代码，我们写代码不是为了接受批评和指责，而是为了让其他人来膜拜。</p>
-<p>那么接下来就有一个很有意思的问题值得探讨一下，我们需要一个程序从输入的三个数中找出最大的那个数。这个程序对任何会编程的人来说都是小菜一碟，甚至不会编程的人经过10分钟的学习也能搞定。下面是用来解决这个问题的Python代码。</p>
-<pre class=" language-Python"><code class="language-Python">a = int(input('a = '))
-b = int(input('b = '))
-c = int(input('c = '))
-if a > b:
-    the_max = a
-else:
-    the_max = b
-if c > the_max:
-    the_max = c
-print('The max is:', the_max)</code></pre>
-<p>但是我们刚才说了，程序员都是懒惰的，很多程序员都会使用三元条件运算符来改写上面的代码。</p>
-<pre class=" language-Python"><code class="language-Python">a = int(input('a = '))
-b = int(input('b = '))
-c = int(input('c = '))
-the_max = a if a > b else b
-the_max = c if c > the_max else the_max
-print('The max is:', the_max)</code></pre>
-<p>需要说明的是，Python在2.5版本以前是没有上面代码第4行和第5行中使用的三元条件运算符的，究其原因是Guido van Rossum（Python之父）认为三元条件运算符并不能帮助 Python变得更加简洁，于是那些习惯了在C/C++或Java中使用三元条件运算符（在这些语言中，三元条件运算符也称为“Elvis运算符”，因为<code>?:</code>放在一起很像著名摇滚歌手猫王Elvis的大背头）的程序员试着用<code>and</code>和<code>or</code>运算符的短路特性来模拟出三元操作符，于是在那个年代，上面的代码是这样写的。</p>
-<pre class=" language-Python"><code class="language-Python">a = int(input('a = '))
-b = int(input('b = '))
-c = int(input('c = '))
-the_max = a > b and a or b
-the_max = c > the_max and c or the_max
-print('The max is:', the_max)</code></pre>
-<p>但是这种做法在某些场景下是不能成立的，且看下面的代码。</p>
-<pre class=" language-Python"><code class="language-Python">a = 0
-b = -100
-# 下面的代码本来预期输出a的值，结果却得到了b的值
-# 因为a的值0在进行逻辑运算时会被视为False来处理
-print(True and a or b)
-# print(a if True else b)</code></pre>
-<p>所以在Python 2.5以后引入了三元条件运算符来避免上面的风险（上面代码被注释掉的最后一句话）。那么，问题又来了，上面的代码还可以写得更简短吗？答案是肯定的。</p>
-<pre class=" language-Python"><code class="language-Python">a = int(input('a = '))
-b = int(input('b = '))
-c = int(input('c = '))
-print('The max is:', (a if a > b else b) if (a if a > b else b) > c else c)</code></pre>
-<p>但是，这样做真的好吗？如此复杂的表达式是不是让代码变得晦涩了很多呢？我们发现，在实际开发中很多开发者都喜欢过度的使用某种语言的特性或语法糖，于是简单的多行代码变成了复杂的单行表达式，这样做真的好吗？这个问题我也不止一次的问过自己，现在我能给出的答案是下面的代码，使用辅助函数。</p>
-<pre class=" language-Python"><code class="language-Python">def the_max(x, y):
-    return x if x > y else y
-
-
-a = int(input('a = '))
-b = int(input('b = '))
-c = int(input('c = '))
-print('The max is:', the_max(the_max(a, b), c))</code></pre>
-<p>上面的代码中，我定义了一个辅助函数<code>the_max</code>用来找出参数传入的两个值中较大的那一个，于是下面的输出语句可以通过两次调用<code>the_max</code>函数来找出三个数中的最大值，现在代码的可读性是不是好了很多。用辅助函数来替代复杂的表达式真的是一个不错的选择，关键是比较大小的逻辑转移到这个辅助函数后不仅可以反复调用它，而且还可以进行级联操作。</p>
-<p>当然，很多语言中比较大小的函数根本没有必要自己来实现（通常都是内置函数），Python也是如此。Python内置的max函数利用了Python对可变参数的支持，允许一次性传入多个值或者一个迭代器并找出那个最大值，所以上面讨论的问题在Python中也就是一句话的事，但是从复杂表达式到使用辅助函数简化复杂表达式这个思想是非常值得玩味的，所以分享出来跟大家做一个交流。</p>
-<pre class=" language-Python"><code class="language-Python">a = int(input('a = '))
-b = int(input('b = '))
-c = int(input('c = '))
-print('The max is:', max(a, b, c))</code></pre>
+                <h2 id="数据表"><a href="#数据表" class="headerlink" title="数据表"></a>数据表</h2><p>–1.学生表</p>
+<p>Student(SId,Sname,Sage,Ssex)</p>
+<p>–SId 学生编号,Sname 学生姓名,Sage 出生年月,Ssex 学生性别</p>
+<p>–2.课程表</p>
+<p>Course(CId,Cname,TId)</p>
+<p>–CId 课程编号,Cname 课程名称,TId 教师编号</p>
+<p>–3.教师表</p>
+<p>Teacher(TId,Tname)</p>
+<p>–TId 教师编号,Tname 教师姓名</p>
+<p>–4.成绩表</p>
+<p>SC(SId,CId,score)</p>
+<p>–SId 学生编号,CId 课程编号,score 分数</p>
+<p>创建测试数据</p>
+<p>学生表 Student</p>
+<p>create table Student(SId varchar(10),Sname varchar(10),Sage datetime,Ssex varchar(10));<br>insert into Student values(‘01’ , ‘赵雷’ , ‘1990-01-01’ , ‘男’);<br>insert into Student values(‘02’ , ‘钱电’ , ‘1990-12-21’ , ‘男’);<br>insert into Student values(‘03’ , ‘孙风’ , ‘1990-05-20’ , ‘男’);<br>insert into Student values(‘04’ , ‘李云’ , ‘1990-08-06’ , ‘男’);<br>insert into Student values(‘05’ , ‘周梅’ , ‘1991-12-01’ , ‘女’);<br>insert into Student values(‘06’ , ‘吴兰’ , ‘1992-03-01’ , ‘女’);<br>insert into Student values(‘07’ , ‘郑竹’ , ‘1989-07-01’ , ‘女’);<br>insert into Student values(‘09’ , ‘张三’ , ‘2017-12-20’ , ‘女’);<br>insert into Student values(‘10’ , ‘李四’ , ‘2017-12-25’ , ‘女’);<br>insert into Student values(‘11’ , ‘李四’ , ‘2017-12-30’ , ‘女’);<br>insert into Student values(‘12’ , ‘赵六’ , ‘2017-01-01’ , ‘女’);<br>insert into Student values(‘13’ , ‘孙七’ , ‘2018-01-01’ , ‘女’);</p>
+<p>科目表 Course</p>
+<p>create table Course(CId varchar(10),Cname nvarchar(10),TId varchar(10))<br>insert into Course values(‘01’ , ‘语文’ , ‘02’)<br>insert into Course values(‘02’ , ‘数学’ , ‘01’)<br>insert into Course values(‘03’ , ‘英语’ , ‘03’)</p>
+<p>教师表 Teacher</p>
+<p>create table Teacher(TId varchar(10),Tname varchar(10))<br>insert into Teacher values(‘01’ , ‘张三’)<br>insert into Teacher values(‘02’ , ‘李四’)<br>insert into Teacher values(‘03’ , ‘王五’)</p>
+<p>成绩表 SC</p>
+<p>create table SC(SId varchar(10),CId varchar(10),score decimal(18,1))<br>insert into SC values(‘01’ , ‘01’ , 80)<br>insert into SC values(‘01’ , ‘02’ , 90)<br>insert into SC values(‘01’ , ‘03’ , 99)<br>insert into SC values(‘02’ , ‘01’ , 70)<br>insert into SC values(‘02’ , ‘02’ , 60)<br>insert into SC values(‘02’ , ‘03’ , 80)<br>insert into SC values(‘03’ , ‘01’ , 80)<br>insert into SC values(‘03’ , ‘02’ , 80)<br>insert into SC values(‘03’ , ‘03’ , 80)<br>insert into SC values(‘04’ , ‘01’ , 50)<br>insert into SC values(‘04’ , ‘02’ , 30)<br>insert into SC values(‘04’ , ‘03’ , 20)<br>insert into SC values(‘05’ , ‘01’ , 76)<br>insert into SC values(‘05’ , ‘02’ , 87)<br>insert into SC values(‘06’ , ‘01’ , 31)<br>insert into SC values(‘06’ , ‘03’ , 34)<br>insert into SC values(‘07’ , ‘02’ , 89)<br>insert into SC values(‘07’ , ‘03’ , 98)</p>
+<p>练习题目</p>
+<ol>
+<li>查询” 01 “课程比” 02 “课程成绩高的学生的信息及课程分数</li>
+</ol>
+<p>1.1 查询同时存在” 01 “课程和” 02 “课程的情况</p>
+<p>1.2 查询存在” 01 “课程但可能不存在” 02 “课程的情况(不存在时显示为 null )</p>
+<p>1.3 查询不存在” 01 “课程但存在” 02 “课程的情况</p>
+<ol start="2">
+<li><p>查询平均成绩大于等于 60 分的同学的学生编号和学生姓名和平均成绩</p>
+</li>
+<li><p>查询在 SC 表存在成绩的学生信息</p>
+</li>
+<li><p>查询所有同学的学生编号、学生姓名、选课总数、所有课程的总成绩(没成绩的显示为 null )</p>
+</li>
+</ol>
+<p>4.1 查有成绩的学生信息</p>
+<ol start="5">
+<li><p>查询「李」姓老师的数量</p>
+</li>
+<li><p>查询学过「张三」老师授课的同学的信息</p>
+</li>
+<li><p>查询没有学全所有课程的同学的信息</p>
+</li>
+<li><p>查询至少有一门课与学号为” 01 “的同学所学相同的同学的信息</p>
+</li>
+<li><p>查询和” 01 “号的同学学习的课程 完全相同的其他同学的信息</p>
+</li>
+<li><p>查询没学过”张三”老师讲授的任一门课程的学生姓名</p>
+</li>
+<li><p>查询两门及其以上不及格课程的同学的学号，姓名及其平均成绩</p>
+</li>
+<li><p>检索” 01 “课程分数小于 60，按分数降序排列的学生信息</p>
+</li>
+<li><p>按平均成绩从高到低显示所有学生的所有课程的成绩以及平均成绩</p>
+</li>
+<li><p>查询各科成绩最高分、最低分和平均分：</p>
+</li>
+</ol>
+<p>以如下形式显示：课程 ID，课程 name，最高分，最低分，平均分，及格率，中等率，优良率，优秀率</p>
+<p>及格为&gt;=60，中等为：70-80，优良为：80-90，优秀为：&gt;=90</p>
+<p>要求输出课程号和选修人数，查询结果按人数降序排列，若人数相同，按课程号升序排列</p>
+<ol start="15">
+<li>按各科成绩进行排序，并显示排名， Score 重复时保留名次空缺</li>
+</ol>
+<p>15.1 按各科成绩进行排序，并显示排名， Score 重复时合并名次</p>
+<ol start="16">
+<li>查询学生的总成绩，并进行排名，总分重复时保留名次空缺</li>
+</ol>
+<p>16.1 查询学生的总成绩，并进行排名，总分重复时不保留名次空缺</p>
+<ol start="17">
+<li><p>统计各科成绩各分数段人数：课程编号，课程名称，[100-85]，[85-70]，[70-60]，[60-0] 及所占百分比</p>
+</li>
+<li><p>查询各科成绩前三名的记录</p>
+</li>
+<li><p>查询每门课程被选修的学生数</p>
+</li>
+<li><p>查询出只选修两门课程的学生学号和姓名</p>
+</li>
+<li><p>查询男生、女生人数</p>
+</li>
+<li><p>查询名字中含有「风」字的学生信息</p>
+</li>
+<li><p>查询同名同性学生名单，并统计同名人数</p>
+</li>
+<li><p>查询 1990 年出生的学生名单</p>
+</li>
+<li><p>查询每门课程的平均成绩，结果按平均成绩降序排列，平均成绩相同时，按课程编号升序排列</p>
+</li>
+<li><p>查询平均成绩大于等于 85 的所有学生的学号、姓名和平均成绩</p>
+</li>
+<li><p>查询课程名称为「数学」，且分数低于 60 的学生姓名和分数</p>
+</li>
+<li><p>查询所有学生的课程及分数情况（存在学生没成绩，没选课的情况）</p>
+</li>
+<li><p>查询任何一门课程成绩在 70 分以上的姓名、课程名称和分数</p>
+</li>
+<li><p>查询不及格的课程</p>
+</li>
+<li><p>查询课程编号为 01 且课程成绩在 80 分以上的学生的学号和姓名</p>
+</li>
+<li><p>求每门课程的学生人数</p>
+</li>
+<li><p>成绩不重复，查询选修「张三」老师所授课程的学生中，成绩最高的学生信息及其成绩</p>
+</li>
+<li><p>成绩有重复的情况下，查询选修「张三」老师所授课程的学生中，成绩最高的学生信息及其成绩</p>
+</li>
+<li><p>查询不同课程成绩相同的学生的学生编号、课程编号、学生成绩</p>
+</li>
+<li><p>查询每门功成绩最好的前两名</p>
+</li>
+<li><p>统计每门课程的学生选修人数（超过 5 人的课程才统计）。</p>
+</li>
+<li><p>检索至少选修两门课程的学生学号</p>
+</li>
+<li><p>查询选修了全部课程的学生信息</p>
+</li>
+<li><p>查询各学生的年龄，只按年份来算</p>
+</li>
+<li><p>按照出生日期来算，当前月日 &lt; 出生年月的月日则，年龄减一</p>
+</li>
+<li><p>查询本周过生日的学生</p>
+</li>
+<li><p>查询下周过生日的学生</p>
+</li>
+<li><p>查询本月过生日的学生</p>
+</li>
+<li><p>查询下月过生日的学生</p>
+</li>
+</ol>
+<p>自己写的参考答案，如果有错误或者更好的解答，有劳各位提供，谢谢。</p>
+<p>1.查询” 01 “课程比” 02 “课程成绩高的学生的信息及课程分数</p>
+<p>select *<br>from (select SId ,score from sc where sc.CId=’01’)as t1 , (select SId ,score from sc where sc.CId=’02’) as t2<br>where t1.SId=t2.SId<br>and   t1.score&gt;t2.score<br>1.1 查询同时存在” 01 “课程和” 02 “课程的情况</p>
+<p>select *<br>from (select SId ,score from sc where sc.CId=’01’)as t1 , (select SId ,score from sc where sc.CId=’02’) as t2<br>where t1.SId=t2.SId<br>1.2 查询存在” 01 “课程但可能不存在” 02 “课程的情况(不存在时显示为 null )</p>
+<p>select *<br>from (select SId ,score from sc where sc.CId=’01’)as t1 left join  (select SId ,score from sc where sc.CId=’02’) as t2<br>on t1.SId=t2.SId<br>1.3 查询不存在” 01 “课程但存在” 02 “课程的情况</p>
+<p>select *<br>from sc<br>where sc.SId not in (select SId from sc where sc.CId=’01’)<br>and  sc.CId=’02’<br>2. 查询平均成绩大于等于 60 分的同学的学生编号和学生姓名和平均成绩</p>
+<p>select student.*,t1.avgscore<br>from student inner JOIN(<br>select sc.SId ,AVG(sc.score)as avgscore<br>from sc<br>GROUP BY sc.SId<br>HAVING AVG(sc.score)&gt;=60)as t1 on student.SId=t1.SId<br>3. 查询在 SC 表存在成绩的学生信息</p>
+<p>select DISTINCT student.*<br>from student ,sc<br>where student.SId=sc.SId<br>4.查询所有同学的学生编号、学生姓名、选课总数、所有课程的总成绩(没成绩的显示为null)</p>
+<p>select student.SId,student.Sname,t1.sumscore,t1.coursecount<br>from student ,(<br>select SC.SId,sum(sc.score)as sumscore ,count(sc.CId) as coursecount<br>from sc<br>GROUP BY sc.SId) as t1<br>where student.SId =t1.SId<br>4.1 查有成绩的学生信息</p>
+<p>select *<br>from student<br>where EXISTS(select * from sc where student.SId=sc.SId)<br>5. 查询「李」姓老师的数量</p>
+<p>select count(*)<br>from teacher<br>where teacher.Tname like ‘李%</p>
+<ol start="6">
+<li>查询学过「张三」老师授课的同学的信息</li>
+</ol>
+<p>select student.*<br>from teacher  ,course  ,student,sc<br>where teacher.Tname=’张三’<br>and   teacher.TId=course.TId<br>and   course.CId=sc.CId<br>and   sc.SId=student.SId<br>7. 查询没有学全所有课程的同学的信息</p>
+<ul>
+<li>解法1</li>
+</ul>
+<p>select student.*<br>from student<br>where student.SId not in ( select sc.SId<br>from sc<br>group by sc.SId<br>having count(*)=(select count(CId) from course))</p>
+<ul>
+<li>解法2</li>
+</ul>
+<p>select DISTINCT student.*<br>from<br>(select student.SId,course.CId<br>from student,course ) as t1 LEFT JOIN (SELECT sc.SId,sc.CId from sc)as t2 on t1.SId=t2.SId and t1.CId=t2.CId,student<br>where t2.SId is null<br>and   t1.SId=student.SId<br>利用笛卡尔积可以把什么课都没选的同学查询出来</p>
+<ol start="8">
+<li>查询至少有一门课与学号为” 01 “的同学所学相同的同学的信息</li>
+</ol>
+<p>select DISTINCT student.*<br>from  sc ,student<br>where sc.CId in (select CId from sc where sc.SId=’01’)<br>and   sc.SId=student.SId<br>9.查询和” 01 “号的同学学习的课程完全相同的其他同学的信息</p>
+<p>select *<br>from student<br>where student.SId not in (<br>select t1.SId<br>from<br>(select student.SId,t.CId<br>from student ,(select sc.CId from sc where sc.SId=’01’) as t )as t1<br>left join sc on t1.SId=sc.SId and t1.CId=sc.CId<br>where sc.CId is null )<br>and student.SId !=’01’<br>10.查询没学过”张三”老师讲授的任一门课程的学生姓名</p>
+<p>select *<br>from student<br>where student.SId not in<br>(<br>select student.SId<br>from student left join sc on student.SId=sc.SId<br>where EXISTS<br>(select *<br>from teacher ,course<br>where teacher.Tname=’张三’<br>and   teacher.TId=course.TId<br>and     course.CId=sc.CId))<br>11.查询两门及其以上不及格课程的同学的学号，姓名及其平均成绩</p>
+<p>select student.SId,student.Sname,avg(sc.score)<br>from student ,sc<br>where student.SId=sc.SId<br>and   sc.score&lt;60<br>GROUP BY sc.SId<br>HAVING count(*)&gt;=2<br>12. 检索” 01 “课程分数小于 60，按分数降序排列的学生信息</p>
+<p>select student.*<br>from student,sc<br>where sc.CId =’01’<br>and   sc.score&lt;60<br>and   student.SId=sc.SId<br>13. 按平均成绩从高到低显示所有学生的所有课程的成绩以及平均成绩</p>
+<p>select<br>sc.SId,sc.CId,sc.score,t1.avgscore<br>from  sc left join (select sc.SId,avg(sc.score) as avgscore<br>from sc<br>GROUP BY sc.SId) as t1 on sc.SId =t1.SId<br>ORDER BY t1.avgscore DESC<br>14. 查询各科成绩最高分、最低分和平均分：</p>
+<p>以如下形式显示：课程 ID，课程 name，最高分，最低分，平均分，及格率，中等率，优良率，优秀率</p>
+<p>及格为&gt;=60，中等为：70-80，优良为：80-90，优秀为：&gt;=90</p>
+<p>要求输出课程号和选修人数，查询结果按人数降序排列，若人数相同，按课程号升序排列</p>
+<p>select sc.CId ,max(sc.score)as 最高分,min(sc.score)as 最低分,AVG(sc.score)as 平均分,count(<em>)as 选修人数,sum(case when sc.score&gt;=60 then 1 else 0 end )/count(</em>)as 及格率,sum(case when sc.score&gt;=70 and sc.score&lt;80 then 1 else 0 end )/count(<em>)as 中等率,sum(case when sc.score&gt;=80 and sc.score&lt;90 and sc.score&lt;80 then 1 else 0 end )/count(</em>)as 优良率,sum(case when sc.score&gt;=90 then 1 else 0 end )/count(<em>)as 优秀率<br>from sc<br>GROUP BY sc.CId<br>ORDER BY count(</em>)DESC,sc.CId asc<br>15. 按各科成绩进行排序，并显示排名， Score 重复时保留名次空缺</p>
+<p>select sc.SId,sc.CId ,case when @pre_parent_code=sc.CId then @curRank:=@curRank+1 when @pre_parent_code:=sc.CId then  @curRank:=1  end as rank,sc.score<br>from (select @curRank:=0,@pre_parent_code:=’’) as t ,sc<br>ORDER by sc.CId,sc.score desc<br>15.1 按各科成绩进行排序，并显示排名， Score 重复时合并名次</p>
+<p>select sc.SId,sc.CId, CASE when @pre_parent_code=sc.CId<br>then (case when @prefontscore=sc.score then @curRank when @prefontscore:=sc.score then @curRank:=@curRank+1 end )<br>when  @prefontscore:=sc.score then  @curRank:=1 end as rank ,sc.score,@pre_parent_code:=sc.CId<br>from (select @curRank:=0,@pre_parent_code:=’’,@prefontscore :=null) as t ,sc<br>ORDER by sc.CId,sc.score desc<br>16. 查询学生的总成绩，并进行排名，总分重复时保留名次空缺</p>
+<p>select t1.*,@currank:= @currank+1 as rank<br>from (select sc.SId, sum(score)<br>from sc<br>GROUP BY sc.SId<br>ORDER BY sum(score) desc) as t1,(select @currank:=0) as t<br>16.1 查询学生的总成绩，并进行排名，总分重复时不保留名次空缺</p>
+<p>select t1.*, case when @fontscore=t1.sumscore then @currank  when @fontscore:=t1.sumscore  then @currank:=@currank+1  end as rank<br>from (select sc.SId, sum(score) as sumscore<br>from sc<br>GROUP BY sc.SId<br>ORDER BY sum(score) desc) as t1,(select @currank:=0,@fontscore:=null) as t<br>17. 统计各科成绩各分数段人数：课程编号，课程名称，[100-85]，[85-70]，[70-60]，[60-0] 及所占百分比</p>
+<p>select course.CId,course.Cname,t1.*<br>from course LEFT JOIN (<br>select sc.CId,CONCAT(sum(case when sc.score&gt;=85 and sc.score&lt;=100 then 1 else 0 end )/count(<em>)</em>100,’%’) as ‘[85-100]’,<br>CONCAT(sum(case when sc.score&gt;=70 and sc.score&lt;85 then 1 else 0 end )/count(<em>)</em>100,’%’) as ‘[70-85)’,<br>CONCAT(sum(case when sc.score&gt;=60 and sc.score&lt;70 then 1 else 0 end )/count(<em>)</em>100,’%’) as ‘[60-70)’,<br>CONCAT(sum(case when sc.score&gt;=0 and sc.score&lt;60 then 1 else 0 end )/count(<em>)</em>100,’%’) as ‘[0-60)’<br>from sc<br>GROUP BY sc.CId) as t1 on course.CId=t1.CId<br>18. 查询各科成绩前三名的记录</p>
+<p>思路：前三名转化为若大于此成绩的数量少于3即为前三名。</p>
+<p>select *<br>from sc<br>where  (select count(*) from sc as a where sc.CId =a.CId and  sc.score &lt;a.score )&lt;3<br>ORDER BY CId asc,sc.score desc<br>19. 查询每门课程被选修的学生数</p>
+<p>select sc.CId,count(*)<br>from sc<br>GROUP BY sc.CId<br>20. 查询出只选修两门课程的学生学号和姓名</p>
+<p>select student.SId,student.Sname<br>from sc,student<br>where student.SId=sc.SId<br>GROUP BY sc.SId<br>HAVING count(*)=2<br>21.查询男生、女生人数</p>
+<p>select student.Ssex ,count(*) as 人数<br>from student<br>GROUP BY student.Ssex<br>22. 查询名字中含有「风」字的学生信息</p>
+<p>select *<br>from student<br>where student.Sname like ‘%风%’<br>23.查询同名同性学生名单，并统计同名人数</p>
+<p>select *<br>from student LEFT JOIN (select Sname,Ssex,COUNT(*)同名人数 from Student group by Sname,Ssex) as t1<br>on student.Sname =t1.Sname and student.Ssex=t1.Ssex<br>where t1.同名人数&gt;1<br>24.查询 1990 年出生的学生名单</p>
+<p>select *<br>from student<br>where YEAR(student.Sage)=1990<br>25.查询每门课程的平均成绩，结果按平均成绩降序排列，平均成绩相同时，按课程编号升序排列</p>
+<p>select sc.CId,AVG(sc.score)<br>from sc<br>GROUP BY sc.CId<br>ORDER BY AVG(sc.score) desc ,sc.CId asc<br>26.查询平均成绩大于等于 85 的所有学生的学号、姓名和平均成绩</p>
+<p>select student.SId,student.Sname,t1.avgscore<br>from student INNER JOIN (select sc.SId ,AVG(sc.score) as avgscore from sc GROUP BY sc.SId HAVING AVG(sc.score)&gt;85) as t1 on<br>student.SId=t1.SId<br>27. 查询课程名称为「数学」，且分数低于 60 的学生姓名和分数</p>
+<p>select student.Sname ,t1.score<br>from student INNER JOIN  (select sc.SId,sc.score<br>from sc,course<br>where sc.CId=course.CId<br>and   course.Cname=’数学’<br>and   sc.score&lt;60)as t1 on student.SId=t1.SId<br>28. 查询所有学生的课程及分数情况（存在学生没成绩，没选课的情况）</p>
+<p>select student.SId,sc.CId,sc.score from Student  left join sc  on student.SId=sc.SId<br>29. 查询任何一门课程成绩在 70 分以上的姓名、课程名称和分数</p>
+<p>select student.Sname,course.Cname,sc.score<br>from student , sc  ,course<br>where sc.score&gt;=70<br>and  student.SId=sc.SId<br>and sc.CId=course.CId<br>30.查询存在不及格的课程</p>
+<p>select DISTINCT sc.CId<br>from sc<br>where sc.score &lt;60<br>31.查询课程编号为 01 且课程成绩在 80 分以上的学生的学号和姓名</p>
+<p>select student.SId,student.Sname<br>from student ,sc<br>where sc.CId=’01’<br>and  student.SId=sc.SId<br>and  sc.score&gt;80<br>32. 求每门课程的学生人数</p>
+<p>select sc.CId,count(*) as 学生人数<br>from sc<br>GROUP BY sc.CId<br>33. 成绩不重复，查询选修「张三」老师所授课程的学生中，成绩最高的学生信息及其成绩</p>
+<p>select student.*,sc.score<br>from student ,course ,teacher ,sc<br>where course.CId=sc.CId<br>and course.TId=teacher.TId<br>and teacher.Tname=’张三’<br>and student.SId =sc.SId<br>LIMIT 1<br>34. 成绩有重复的情况下，查询选修「张三」老师所授课程的学生中，成绩最高的学生信息及其成绩</p>
+<p>select student.*,t1.score<br>from student INNER JOIN (select sc.SId,sc.score, case when @fontage=sc.score then @rank when @fontage:=sc.score then @rank:=@rank+1 end  as rank<br>from course ,teacher ,sc,(select @fontage:=null,@rank:=0) as t<br>where course.CId=sc.CId<br>and course.TId=teacher.TId<br>and teacher.Tname=’张三’<br>ORDER BY sc.score DESC) as t1 on student.SId=t1.SId<br>where t1.rank=1<br>35. 查询不同课程成绩相同的学生的学生编号、课程编号、学生成绩</p>
+<p>select *<br>from sc as t1<br>where exists(select * from sc as t2 where t1.SId=t2.SId and t1.CId!=t2.CId and t1.score =t2.score )</p>
+<p>36.查询每门功成绩最好的前两名</p>
+<p>select *<br>from sc as t1<br>where (select count(*) from sc as t2 where t1.CId=t2.CId and t2.score &gt;t1.score)&lt;2<br>ORDER BY t1.CId<br>37.统计每门课程的学生选修人数（超过 5 人的课程才统计）</p>
+<p>select sc.CId as 课程编号,count(<em>) as 选修人数<br>from sc<br>GROUP BY sc.CId<br>HAVING count(</em>)&gt;5<br>38.检索至少选修两门课程的学生学号</p>
+<p>select DISTINCT t1.SId<br>from sc as t1<br>where (select count(* )from sc where t1.SId=sc.SId)&gt;=3<br>39. 查询选修了全部课程的学生信息</p>
+<p>select student.*<br>from sc ,student<br>where sc.SId=student.SId<br>GROUP BY sc.SId<br>HAVING count(<em>) = (select DISTINCT count(</em>) from course )<br>40.查询各学生的年龄，只按年份来算</p>
+<p>select student.SId as 学生编号,student.Sname  as  学生姓名,TIMESTAMPDIFF(YEAR,student.Sage,CURDATE()) as 学生年龄<br>from student<br>41. 按照出生日期来算，当前月日 &lt; 出生年月的月日则，年龄减一</p>
+<p>select student.SId as 学生编号,student.Sname  as  学生姓名,TIMESTAMPDIFF(YEAR,student.Sage,CURDATE()) as 学生年龄<br>from student<br>42.查询本周过生日的学生</p>
+<p>select *<br>from student<br>where YEARWEEK(student.Sage)=YEARWEEK(CURDATE())<br>43. 查询下周过生日的学生</p>
+<p>select *<br>from student<br>where YEARWEEK(student.Sage)=CONCAT(YEAR(CURDATE()),week(CURDATE())+1)<br>44.查询本月过生日的学生</p>
+<p>select *<br>from student<br>where EXTRACT(YEAR_MONTH FROM student.Sage)=EXTRACT(YEAR_MONTH FROM CURDATE())<br>45.查询下月过生日的学生</p>
+<p>select *<br>from student<br>where EXTRACT(YEAR_MONTH FROM student.Sage)=EXTRACT(YEAR_MONTH FROM DATE_ADD(CURDATE(),IN</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -583,7 +731,7 @@ print('The max is:', max(a, b, c))</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://1002178959.github.io/2020/06/04/python/yong-han-shu-huan-shi-yong-fu-za-de-biao-da-shi/">http://1002178959.github.io/2020/06/04/python/yong-han-shu-huan-shi-yong-fu-za-de-biao-da-shi/</a>
+                    <a href="http://1002178959.github.io/2020/07/21/mysql/mysql-lian-xi/">http://1002178959.github.io/2020/07/21/mysql/mysql-lian-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -621,8 +769,8 @@ print('The max is:', max(a, b, c))</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Python/">
-                                    <span class="chip bg-color">Python</span>
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                    <span class="chip bg-color">数据库</span>
                                 </a>
                             
                         </div>
@@ -1053,46 +1201,53 @@ print('The max is:', max(a, b, c))</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/06/08/pythonic/python-bian-cheng-guan-li/">
+                <a href="/2020/07/21/mysql/mysql-lian-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Python编程惯例">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="50道MySQL练习题">
                         
-                        <span class="card-title">Python编程惯例</span>
+                        <span class="card-title">50道MySQL练习题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Python编程惯例“惯例”这个词指的是“习惯的做法，常规的办法，一贯的做法”，与这个词对应的英文单词叫“idiom”。由于Python跟其他很多编程语言在语法和使用上还是有比较显著的差别，因此作为一个Python开发者如果不能掌握这些惯例
+                            数据表–1.学生表
+Student(SId,Sname,Sage,Ssex)
+–SId 学生编号,Sname 学生姓名,Sage 出生年月,Ssex 学生性别
+–2.课程表
+Course(CId,Cname,TId)
+–CId 课程编号,C
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Pythonic/" class="post-category">
-                                    Pythonic
+                            <a href="/categories/MySQL/" class="post-category">
+                                    MySQL
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
                     </a>
                     
                 </div>
@@ -1106,31 +1261,38 @@ print('The max is:', max(a, b, c))</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/03/pythonic/pep8-feng-ge-zhi-nan/">
+                <a href="/2020/07/18/mian-shi-zhi-nan/python-mian-shi-ti-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="PEP 8风格指南">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Python面试题集">
                         
-                        <span class="card-title">PEP 8风格指南</span>
+                        <span class="card-title">Python面试题集</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            PEP 8风格指南PEP是Python Enhancement Proposal的缩写，通常翻译为“Python增强提案”。每个PEP都是一份为Python社区提供的指导Python往更好的方向发展的技术文档，其中的第8号增强提案（PEP 
+                            Python面试题
+说一说Python中的新式类和旧式类有什么区别。
+
+建议阅读Python2和Python3中新式类、经典类(旧式类)的区别
+
+
+Python中is运算符和==运算符有什么区别？
+ ==比较操作符：用来比较两个对象是否相等
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Pythonic/" class="post-category">
-                                    Pythonic
+                            <a href="/categories/%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8D%97/" class="post-category">
+                                    面试指南
                                 </a>
                             
                             
